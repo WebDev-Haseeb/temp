@@ -518,7 +518,7 @@ function initializeCarousel() {
     const rightArrow = document.getElementById('rightArrow');
     const cardWidth = 350 + 32; // card width + gap
     // If screen size is greater than 768px, the visible cards are3 and if it's less than 768 they are two and 1 for less than 480px.
-    const visibleCards = window.innerWidth > 768 ? 3 : window.innerWidth > 480 ? 1 : 0;
+    const visibleCards = window.innerWidth > 768 ? 3 : window.innerWidth < 768 ? 1:0;
 
     let currentIndex = 0;
 
