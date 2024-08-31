@@ -4,17 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About PeerSphere - Share Knowledge, Empower Learning</title>
+    <title>PeerSphere - Sign Up / Sign In</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="icon" href="./assets/favIcon.svg">
-
-    <!-- CSS Styling Files -->
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./styling/footer.css">
-    <link rel="stylesheet" href="./styling/about.css">
+    <link rel="stylesheet" href="./styling/auth.css">
 </head>
 
 <body class="dark-mode">
@@ -26,8 +24,8 @@
             <div class="logo"><a href="./index.html">PeerSphere</a></div>
 
             <ul class="nav-links">
-                <li><a href="./index.html" class="nav-item">Home</a></li>
-                <li><a href="./about.html" class="nav-item active">About</a></li>
+                <li><a href="./index.html" class="nav-item active">Home</a></li>
+                <li><a href="./about.html" class="nav-item">About</a></li>
                 <li><a href="#" class="nav-item">Subjects</a></li>
                 <li><a href="#" class="nav-item">Upload</a></li>
             </ul>
@@ -45,80 +43,54 @@
                 <span></span>
                 <span></span>
             </button>
+
         </nav>
     </header>
 
-    <main>
-        <section class="about-hero">
-            <h1>About <span>PeerSphere</span></h1>
-        </section>
-
-        <section class="key-features">
-            <div class="container">
-                <h2>Key Features</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <i class="fas fa-share-alt"></i>
-                        <h3>Resource Sharing</h3>
-                        <p>Upload and access a wide range of study materials, from notes to past papers.</p>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-comments"></i>
-                        <h3>Peer Discussions</h3>
-                        <p>Engage in meaningful discussions with fellow students from around the world.</p>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-user-graduate"></i>
-                        <h3>Expert Verified Content</h3>
-                        <p>Benefit from curated content verified by subject matter experts.</p>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-chart-line"></i>
-                        <h3>Progress Tracking</h3>
-                        <p>Monitor your learning journey with personalized progress tracking tools.</p>
-                    </div>
+    <main class="auth-container">
+        <div class="auth-box">
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="signin">Sign In</button>
+                <button class="auth-tab" data-tab="signup">Sign Up</button>
+            </div>
+            <form id="signin-form" class="auth-form active">
+                <h2>Welcome Back!</h2>
+                <div class="input-group">
+                    <input type="email" id="signin-email" placeholder="Email" required>
+                    <label for="signin-email">Email</label>
                 </div>
-            </div>
-        </section>
-
-        <section class="team">
-            <div class="container">
-                <h2>Meet Our Team</h2>
-                <div class="team-grid">
-                    <div class="team-member">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Doe">
-                        <h3>John Doe</h3>
-                        <p>Founder & CEO</p>
-                    </div>
-                    <div class="team-member">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Jane Smith">
-                        <h3>Jane Smith</h3>
-                        <p>CTO</p>
-                    </div>
-                    <div class="team-member">
-                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Mike Johnson">
-                        <h3>Mike Johnson</h3>
-                        <p>Head of Content</p>
-                    </div>
-                    <div class="team-member">
-                        <img src="https://randomuser.me/api/portraits/women/17.jpg" alt="Sarah Lee">
-                        <h3>Sarah Lee</h3>
-                        <p>Community Manager</p>
-                    </div>
+                <div class="input-group">
+                    <input type="password" id="signin-password" placeholder="Password" required>
+                    <label for="signin-password">Password</label>
+                    <i class="fas fa-eye-slash toggle-password"></i>
                 </div>
-            </div>
-        </section>
-
-        <section class="join-community">
-            <div class="container">
-                <h2>Join Our Community</h2>
-                <p>Be part of a global network of learners and contribute to the future of education.</p>
-                <button class="cta-button">Sign Up Now</button>
-            </div>
-        </section>
+                <button type="submit" class="auth-submit">Sign In</button>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+            </form>
+            <form id="signup-form" class="auth-form">
+                <h2>Join PeerSphere</h2>
+                <div class="input-group">
+                    <input type="text" id="signup-name" placeholder="Full Name" required>
+                    <label for="signup-name">Full Name</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="signup-email" placeholder="Email" required>
+                    <label for="signup-email">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="signup-password" placeholder="Password" required>
+                    <label for="signup-password">Password</label>
+                    <i class="fas fa-eye-slash toggle-password"></i>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="signup-confirm-password" placeholder="Confirm Password" required>
+                    <label for="signup-confirm-password">Confirm Password</label>
+                    <i class="fas fa-eye-slash toggle-password"></i>
+                </div>
+                <button type="submit" class="auth-submit">Sign Up</button>
+            </form>
+        </div>
     </main>
-
-
 
     <!-- *Footer Section  -->
     <footer class="site-footer">
@@ -157,7 +129,6 @@
         </div>
     </div>
 
-
     <!-- For Hamburger Menu. -->
     <div class="mobile-nav">
         <div class="mobile-nav-header">
@@ -181,9 +152,16 @@
         </div>
     </div>
 
+    <div id="feedback-message" class="feedback-message">
+        <div class="feedback-message-content">
+            <i class="fas fa-check-circle"></i>
+            <p>Thank you for your feedback!</p>
+        </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="./script.js"></script>
+    <script src="./auth.js"></script>
     <script src="./footer.js"></script>
 </body>
 
